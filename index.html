@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+   <div class="header">
+            <p class="header__title text-center">X-MAN</p>
+        </div>
+    <div class="wrapper">
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="block">
+                    <div class="menu__block"><a href="#" class="menu__link">Team</a></div>
+                    <span class="menu__arrow-first arrow" onclick="hideshow();" id="arrow"></span>
+                    <span class="menu__arrow-second arrow" onclick="hidenoshow();" id="arrow-show"></span>
+<!--
+                    <div class="menu__arrow-first arrow"></div>
+                    <span class="menu__arrow-second arrow"></span>
+-->
+                    <ul class="sub-menu__list dis-none" id="sub-menu__list">
+                        <li>
+                            <a href="#" class="sub-menu__link">Leaders</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sub-menu__link">Members</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="block">
+                    <div class="menu__block"><a href="#" class="menu__link">Enemies</a></div>
+                    <span class="menu__arrow-first arrow" onclick="hideshowTwo();" id="arrow-two"></span>
+                    <span class="menu__arrow-second arrow" onclick="hidenoshowTwo();" id="arrow-show-two"></span>
+                    <ul class="sub-menu__list dis-none" id="sub-menu__list-two">
+                        <li>
+                            <a href="#" class="sub-menu__link">Brotherfood Of Mutants</a>
+                            <span class="menu__arrow-first arrow" onclick="hideshowThree();" id="arrow-three"></span>
+                            <span class="menu__arrow-second arrow" onclick="hidenoshowThree();" id="arrow-show-three"></span>
+                            <ul class="sub-sub-menu__list dis-none" id="sub-sub-menu__list">
+                                <li>
+                                    <a href="#" class="sub-sub-menu__link">Magneto</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="sub-sub-menu__link">Mistique</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="sub-sub-menu__link">Queksilver</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="sub-menu__link">Other</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+<script>
+//
+    function hideshow() {
+  document.getElementById("sub-menu__list").style.cssText="display:block";
+  document.getElementById("arrow").style.cssText="display:none";
+    document.getElementById("arrow-show").style.cssText="display:block";
+}
+    function hidenoshow() {
+  document.getElementById("sub-menu__list").style.cssText="display:none";
+  document.getElementById("arrow").style.cssText="display:block";
+    document.getElementById("arrow-show").style.cssText="display:none";
+}
+        function hideshowTwo() {
+  document.getElementById("sub-menu__list-two").style.cssText="display:block";
+  document.getElementById("arrow-two").style.cssText="display:none";
+    document.getElementById("arrow-show-two").style.cssText="display:block";
+}
+    function hidenoshowTwo() {
+  document.getElementById("sub-menu__list-two").style.cssText="display:none";
+  document.getElementById("arrow-two").style.cssText="display:block";
+    document.getElementById("arrow-show-two").style.cssText="display:none";
+}
+    function hideshowThree() {
+  document.getElementById("sub-sub-menu__list").style.cssText="display:block";
+  document.getElementById("arrow-three").style.cssText="display:none";
+    document.getElementById("arrow-show-three").style.cssText="display:block";
+}
+    function hidenoshowThree() {
+  document.getElementById("sub-sub-menu__list").style.cssText="display:none";
+  document.getElementById("arrow-three").style.cssText="display:block";
+    document.getElementById("arrow-show-three").style.cssText="display:none";
+}
+//    if (/Android|webOS|iPhone|iPad|iPod|pocket|psp|kindle|avantgo|blazer|midori|Tablet|Palm|maemo|plucker|phone|BlackBerry|symbian|IEMobile|mobile|ZuneWP7|Windows Phone|Opera Mini/i.test(navigator.userAgent)){
+//     document.getElementById('arrow').style.display = 'block';
+//     };
+//        function hideshow() {
+//  document.getElementById("sub-menu__list").style.cssText="display:none";
+////  document.getElementById("sub-menu__list").style.cssText="display:none";
+//}
+//$(document).ready(function(){
+//	$(".menu__arrow").click(function(){
+//        $("dis-none").removeClass("d-block");
+//        $(this).toggleClass("dis-none");
+//	});
+//});
+    
+    
+</script>
+</html>
